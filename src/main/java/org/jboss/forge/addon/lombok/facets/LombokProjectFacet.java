@@ -10,6 +10,9 @@ import org.jboss.forge.addon.projects.Project;
 import org.jboss.forge.addon.projects.ProjectFacet;
 import org.jboss.forge.addon.projects.facets.DependencyFacet;
 
+/**
+ * Facet to supports Lombok
+ */
 @FacetConstraint(DependencyFacet.class)
 public class LombokProjectFacet extends AbstractFacet<Project> implements ProjectFacet
 {
