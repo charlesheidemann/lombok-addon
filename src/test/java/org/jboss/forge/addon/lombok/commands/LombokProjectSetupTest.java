@@ -17,6 +17,7 @@ import javax.inject.Inject;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.forge.addon.lombok.AbstractTestCase;
+import org.jboss.forge.addon.lombok.facets.LombokProjectFacet;
 import org.jboss.forge.addon.maven.projects.MavenFacet;
 import org.jboss.forge.addon.projects.Project;
 import org.jboss.forge.addon.projects.ProjectFactory;
@@ -80,6 +81,7 @@ public class LombokProjectSetupTest
          assertThat(controller.getInputs().size(), is(0));
          Result result = controller.execute();
          assertThat(result, not(instanceOf(Failed.class)));
+         assertTrue(project.hasFacet(LombokProjectFacet.class));
       }
    }
 
@@ -89,5 +91,6 @@ public class LombokProjectSetupTest
       shellTest.getShell().setCurrentResource(project.getRoot());
       Result result = shellTest.execute(("lombok-project-setup"), 15, TimeUnit.SECONDS);
       assertThat(result, not(instanceOf(Failed.class)));
+      assertTrue(project.hasFacet(LombokProjectFacet.class));
    }
 }
