@@ -4,7 +4,9 @@ import java.util.Optional;
 
 import javax.inject.Inject;
 
+import org.jboss.forge.addon.facets.constraints.FacetConstraint;
 import org.jboss.forge.addon.lombok.builders.LombokEntityBuilder;
+import org.jboss.forge.addon.lombok.facets.LombokProjectFacet;
 import org.jboss.forge.addon.parser.java.facets.JavaSourceFacet;
 import org.jboss.forge.addon.parser.java.resources.JavaResource;
 import org.jboss.forge.addon.ui.context.UIBuilder;
@@ -22,6 +24,7 @@ import org.jboss.forge.addon.ui.util.Metadata;
 /**
  * Lombok: Enable JavaBean Command
  */
+@FacetConstraint(LombokProjectFacet.class)
 public class LombokEnableJavaBean extends AbstractLombokProjectCommand
 {
 
