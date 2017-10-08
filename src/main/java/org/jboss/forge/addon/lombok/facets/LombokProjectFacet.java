@@ -47,7 +47,6 @@ public class LombokProjectFacet extends AbstractFacet<Project> implements Projec
    private void addLombokDependency()
    {
       DependencyFacet dependencyFacet = getFaceted().getFacet(DependencyFacet.class);
-      dependencyFacet.addDirectManagedDependency(POM_DEPENDENCY);
       dependencyFacet.addDirectDependency(POM_DEPENDENCY);
    }
 

@@ -17,7 +17,6 @@ public abstract class AbstractTestCase
             @AddonDependency(name = "org.jboss.forge.addon:ui-test-harness"),
             @AddonDependency(name = "org.jboss.forge.addon:shell-test-harness"),
             @AddonDependency(name = "org.jboss.forge.addon:parser-java"),
-            @AddonDependency(name = "org.jboss.forge.addon:resources"),
             @AddonDependency(name = "org.jboss.forge.addon:facets"),
             @AddonDependency(name = "org.jboss.forge.addon:maven")
    })
